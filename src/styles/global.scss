@@ -1,0 +1,29 @@
+@use './normalize';
+@use './_utils';
+
+:root {
+    --mainFont: 'Open Sans', sans-serif;
+    --uiRed: #ff0000;
+    --uiBlue: #1100ff;
+    --uiYellow: #ffd900;
+    --uiWhite: #f1f1f1;
+    --uiBlack: #131313;
+}
+
+html {
+    font-family: var(--mainFont);
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+body {
+    background-color: var(--uiBlack);
+    color: var(--uiWhite);
+    line-height: 1.7;
+}

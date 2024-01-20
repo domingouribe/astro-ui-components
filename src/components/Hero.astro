@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+	imagePath: string;
+	altText: string;
+	title: string;
+	description: string;
+}
+const { imagePath, altText, title, description } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/*.{jpeg,jpg,png,gif}"
+);
+if (!images[imagePath])
+	throw new Error(
+		`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+	);
+---
+
+<section class="Hero">
+	<div class="Hero-text">
+		<h1 class="Hero-title">{title}</h1>
+		<p class="Hero-description">{description}</p>
+	</div>
+</section>
+
+<style lang="scss">
+	.Hero {
+		height: 50vh;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url("src/assets/neom-9f7oiGARGIg-unsplash.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+
+		&-text {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+
+			color: white;
+		}
+		&-title {
+			font-size: 4rem;
+			margin: 0;
+		}
+	}
+</style>

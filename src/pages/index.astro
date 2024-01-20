@@ -1,16 +1,63 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Mi tiulo" description="Mi description">
+	<Hero
+		title="Hi! This is my awesome hero component"
+		description="This is my wonderful hero description!"
+		imagePath="/src/assets/neom-9f7oiGARGIg-unsplash.jpg"
+		altText="My landscape"
+	/>
+
+	<div class="HomeCards">
+		<div class="Container">
+			<Card
+				title="My beautifuil card"
+				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+				altText="algo aca"
+			/>
+			<Card
+				title="My beautifuil card"
+				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+				altText="algo aca"
+			/>
+			<Card
+				title="My beautifuil card"
+				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+				altText="algo aca"
+			/>
+			<Card
+				title="My beautifuil card"
+				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+				altText="algo aca"
+			/>
+			<Card
+				title="My beautifuil card"
+				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+				altText="algo aca"
+			/>
+			<Card
+				title="My beautifuil card"
+				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+				altText="algo aca"
+			/>
+		</div>
+	</div>
+</MainLayout>
+
+<style lang="scss">
+	.HomeCards {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 1em;
+	}
+</style>

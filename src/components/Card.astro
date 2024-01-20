@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+	imagePath: string;
+	altText: string;
+	title: string;
+	description: string;
+}
+const { imagePath, altText, title, description } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/*.{jpeg,jpg,png,gif}"
+);
+if (!images[imagePath])
+	throw new Error(
+		`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+	);
+---
+
+<div class="Card">
+	<Image
+		src={images[imagePath]()}
+		alt={altText}
+		width={300}
+		class="Card-image"
+	/>
+	<div class="Card-text">
+		<h1 class="Card-title">{title}</h1>
+		<p class="Card-description">{description}</p>
+	</div>
+</div>
+
+<style lang="scss">
+	.Card {
+		width: 300px;
+		background-color: var(--uiWhite);
+		height: fit-content;
+		color: var(--uiBlack);
+		gap: 1em;
+
+		&-image {
+			object-fit: cover;
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		&-text {
+			padding: 1em;
+		}
+
+		&-title {
+			font-size: 1.5rem;
+			margin: 0;
+		}
+
+		&-description {
+			margin: 0;
+		}
+	}
+</style>
