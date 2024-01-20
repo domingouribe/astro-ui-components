@@ -36,6 +36,9 @@ if (!images[imagePath])
 		height: fit-content;
 		color: var(--uiBlack);
 		gap: 1em;
+		flex-grow: 2;
+		border-radius: 1em;
+		overflow: hidden;
 
 		&-image {
 			object-fit: cover;
@@ -55,6 +58,18 @@ if (!images[imagePath])
 
 		&-description {
 			margin: 0;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.Card {
+			width: 400px;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.Card {
+			width: 500px;
 		}
 	}
 </style>
