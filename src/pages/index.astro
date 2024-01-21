@@ -59,7 +59,15 @@ import Card from "../components/Card.astro";
 <style lang="scss">
 	.HomeCards {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: row nowrap;
 		gap: 1em;
+	
+		//Mediaqueris
+		@media (min-width: 768px) {
+			flex-flow: row nowrap;
+		}
+
 	}
+
+	
 </style>
