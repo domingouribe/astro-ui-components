@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
+import SectionArea from "../components/SectionArea.astro";
 ---
 
 <MainLayout title="Mi tiulo" description="Mi description">
@@ -13,61 +14,39 @@ import Card from "../components/Card.astro";
 		heroButtonText="View more..."
 	/>
 
-	<div class="HomeCards">
-		<h2 class="SectionTitle">Cards section</h2>
-		<div class="Container">
-			<Card
-				title="My beautifuil card"
-				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
-				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
-				altText="algo aca"
-			/>
-			<Card
-				title="My beautifuil card"
-				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
-				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
-				altText="algo aca"
-			/>
-			<Card
-				title="My beautifuil card"
-				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
-				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
-				altText="algo aca"
-			/>
-			<Card
-				title="My beautifuil card"
-				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
-				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
-				altText="algo aca"
-			/>
-			<Card
-				title="My beautifuil card"
-				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
-				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
-				altText="algo aca"
-			/>
-			<Card
-				title="My beautifuil card"
-				description="This is my beautiful card for my personal proyect that will show many utile UI elements"
-				imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
-				altText="algo aca"
-			/>
-		</div>
-	</div>
+	<SectionArea
+		title="Experiencia"
+		description="Esta es mi experiencia en el área de desarrollo de software"
+		aditionalClass="HomeSection">
+		<Card
+			title="My beautifuil card"
+			description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+			imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+			altText="algo aca"
+		/>
+		<Card
+			title="My beautifuil card"
+			description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+			imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+			altText="algo aca"
+		/>
+		<Card
+			title="My beautifuil card"
+			description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+			imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+			altText="algo aca"
+		/>
+		<Card
+			title="My beautifuil card"
+			description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+			imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+			altText="algo aca"
+		/>
+		<Card
+			title="My beautifuil card"
+			description="This is my beautiful card for my personal proyect that will show many utile UI elements"
+			imagePath="/src/assets/neom-QOGeYSi11-w-unsplash.jpg"
+			altText="algo aca"
+		/>
+	</SectionArea>
 </MainLayout>
-
-<style lang="scss">
-	.HomeCards {
-		display: flex;
-		flex-flow: row nowrap;
-		gap: 1em;
-	
-		//Mediaqueris
-		@media (min-width: 768px) {
-			flex-flow: row nowrap;
-		}
-
-	}
-
-	
-</style>
